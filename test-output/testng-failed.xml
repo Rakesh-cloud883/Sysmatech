@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [sysmatechSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="sysmatechTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.sysmatech.TestCases.Tc_preventiveMaintenance_Update_051">
+        <methods>
+          <include name="setUp"/>
+          <include name="CreatePreventive_Maintenance_Clone"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sysmatech.TestCases.Tc_preventiveMaintenance_Update_051 -->
+    </classes>
+  </test> <!-- sysmatechTest(failed) -->
+</suite> <!-- Failed suite [sysmatechSuite] -->
