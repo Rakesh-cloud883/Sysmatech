@@ -13,16 +13,25 @@ public class Settings_AssetModelsUpdatePage {
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
+	 @FindBy(xpath = "(//a[@class='sidebar-toggle btn btn-white'])[1]")
+	    WebElement BtnMenu;
 	 @FindBy(xpath =  "//a[@href='#'][contains(.,'Settings')]")
 		WebElement btnsetting;
 	 @FindBy(xpath =  "(//a[normalize-space()='Asset Models'])[1]")
 		WebElement btnAssetModels;
-	 @FindBy(xpath ="(//a[@title='Update'])[1]")
+	 @FindBy(xpath = "(//input[@type='search'])[1]")
+	 WebElement btnSearch;
+	 @FindBy(xpath ="(//a[@class='btn btn-sm btn-warning' or @title='Update'])[1]")   //(//a[@title='Update'])[1]
 	 WebElement BtnUpdate;
-	 @FindBy(xpath ="(//input[@id='name'])[1]")
+	 @FindBy(id ="name")     //(//input[@id='name'])[1]
 	 WebElement BtnName;
 	 @FindBy(xpath ="//button[contains(text(),\"Save\")]")
 	 WebElement BtnSave;
+	 
+	 
+	 public void SetMenuBtn() {
+		  BtnMenu.click();                                         
+	  }
 	 public void SetSetting() {
 		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(0,350)", "");
@@ -31,7 +40,13 @@ public class Settings_AssetModelsUpdatePage {
 	 public void SetAssetModelsBtn() {
 		 btnAssetModels.click();
 	 }
-	 public void SetUpdateBtn() {
+	 public void SetSearch(String search) throws InterruptedException {
+		 btnSearch.clear();
+		 Thread.sleep(2000);
+		 btnSearch.sendKeys(search);
+	 }
+	 public void SetUpdateBtn() throws InterruptedException {
+		 Thread.sleep(3000);
 		BtnUpdate.click(); 
 	 }
 	 public void SetName(String name) {

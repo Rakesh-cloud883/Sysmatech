@@ -20,16 +20,16 @@ public class Settings_DepartmentsCreatePage {
 		 WebElement btnsetting;
 		 @FindBy(xpath="(//a[normalize-space()='Departments'])[1]")
 		 WebElement BtnDepertment;
-		 @FindBy(xpath = "(//a[@class='btn btn-primary pull-right'])[1]")
+		 @FindBy(xpath = "//a[contains(@href,'https://qa.sysmatech.com/public/departments/create')]") //(//a[@class='btn btn-primary pull-right'])[1]
 		 WebElement BtnCreate;
-		 @FindBy(xpath = "(//input[@id='name'])[1]")
+		 @FindBy(id = "name") //(//input[@id='name'])[1]
 		 WebElement TxtDepartmentName;
 		 
 		 @FindBy(xpath = "(//span[@role='presentation'])[1]")
 		 WebElement SelectCompany;
 		 @FindBy(xpath = "(//input[@role='searchbox'])[1]")
 		 WebElement TxtCompany;
-		 @FindBy(xpath = "/html/body/span/span/span[2]/ul/li/div/div[2]")
+		 @FindBy(xpath = "(//div[@class='clearfix'])[1]") ///html/body/span/span/span[2]/ul/li/div/div[2]
 		 WebElement ClickCompany;
 		 
 		 @FindBy(xpath = "(//span[@role='presentation'])[2]")
@@ -78,6 +78,7 @@ public class Settings_DepartmentsCreatePage {
 		 }
 		 public void setLocation(String location) {
 			 SelectLocation.click();
+			 
 			 TxtLocation.sendKeys(location);
 			 ClickLocation.click();
 		 }

@@ -86,23 +86,30 @@ WebDriver ldriver;
 		ClickBulkCheckOutDropdown1.click();
 		
 	}
-
+   public void SetSearchBtn(String sname) throws InterruptedException {
+	   Thread.sleep(3000);
+	   SearchBtn.clear();
+	   SearchBtn.sendKeys(sname);
+   }
 
 	public void SetClickBulkCheckOut() throws InterruptedException {
 		Thread.sleep(3000);
 		SelectBulkCheckOutItem.click();
-		SelectBulkCheckOutItem1.click();
-		SelectGenLablesItem2.click();
+//		SelectBulkCheckOutItem1.click();
+//		SelectGenLablesItem2.click();
 		
-		ClickGo.click();
+		
 	}
 	
+	public void SetGoBtn() {
+		ClickGo.click();
+	}
 	public void SetAssetSelect(String AssetValue)
 	{
 		ClickAsset.click();
 		SelectAssetbtn.click();
-	  txtAssetSelect.sendKeys(AssetValue);
-	  ClickAssetBtn.click();
+	    txtAssetSelect.sendKeys(AssetValue);
+	    ClickAssetBtn.click();
 		
 	}
 	

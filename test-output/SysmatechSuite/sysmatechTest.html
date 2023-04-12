@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>sysmatechTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 23 11:39:47 IST 2023</td>
+<td>Started on:</td><td>Wed Apr 12 17:50:50 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>42 seconds (42884 ms)</td>
+<tr><td>Total time:</td><td>674 seconds (674035 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,104 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Asset_BulkCheckOut_040.BulkCheckout()'><b>BulkCheckout</b><br>Test class: com.sysmatech.TestCases.Tc_Asset_BulkCheckOut_040</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=111.0.5563.148)
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6fa2a13113833ab17d7f13e6c02d5d48, findElement {using=xpath, value=(//span[@role=&apos;presentation&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\rakesh\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55963/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fa2a13113833ab17d7f13e6c02d5d48
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.sysmatech.PageObject.Asset_CreateAssetBulkCheckOutPage.setBulkCheckOutBtn(Asset_CreateAssetBulkCheckOutPage.java:83)
+	at com.sysmatech.TestCases.Tc_Asset_BulkCheckOut_040.BulkCheckout(Tc_Asset_BulkCheckOut_040.java:22)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace554280593", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace554280593'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=111.0.5563.148)
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6fa2a13113833ab17d7f13e6c02d5d48, findElement {using=xpath, value=(//span[@role=&apos;presentation&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\rakesh\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55963/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fa2a13113833ab17d7f13e6c02d5d48
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.sysmatech.PageObject.Asset_CreateAssetBulkCheckOutPage.setBulkCheckOutBtn(Asset_CreateAssetBulkCheckOutPage.java:83)
+	at com.sysmatech.TestCases.Tc_Asset_BulkCheckOut_040.BulkCheckout(Tc_Asset_BulkCheckOut_040.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>41</td>
+<td>com.sysmatech.TestCases.Tc_Asset_BulkCheckOut_040@59662a0b</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +173,75 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.sysmatech.TestCases.Tc_preventiveMaintenance_Update_051.CreatePreventive_Maintenance_Clone()'><b>CreatePreventive_Maintenance_Clone</b><br>Test class: com.sysmatech.TestCases.Tc_preventiveMaintenance_Update_051</td>
+<td title='com.sysmatech.TestCases.Tc_Asset_Copy_036.CreateAssetCopy()'><b>CreateAssetCopy</b><br>Test class: com.sysmatech.TestCases.Tc_Asset_Copy_036</td>
 <td></td>
-<td>32</td>
-<td>com.sysmatech.TestCases.Tc_preventiveMaintenance_Update_051@6b81ce95</td></tr>
+<td>39</td>
+<td>com.sysmatech.TestCases.Tc_Asset_Copy_036@9597028</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Settings_WorkOrderPriorityCreate_055.WOPrioritiesCreate2()'><b>WOPrioritiesCreate2</b><br>Test class: com.sysmatech.TestCases.Tc_Settings_WorkOrderPriorityCreate_055</td>
+<td></td>
+<td>43</td>
+<td>com.sysmatech.TestCases.Tc_Settings_WorkOrderPriorityCreate_055@1a482e36</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Asset_Delete_037.AssetDelete()'><b>AssetDelete</b><br>Test class: com.sysmatech.TestCases.Tc_Asset_Delete_037</td>
+<td></td>
+<td>35</td>
+<td>com.sysmatech.TestCases.Tc_Asset_Delete_037@6069db50</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Asset_DeleteInBulk_038.AssetBulkDelete()'><b>AssetBulkDelete</b><br>Test class: com.sysmatech.TestCases.Tc_Asset_DeleteInBulk_038</td>
+<td></td>
+<td>38</td>
+<td>com.sysmatech.TestCases.Tc_Asset_DeleteInBulk_038@4efbca5a</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Asset_GenerateLabelsCreate_039.GeneratedAsset()'><b>GeneratedAsset</b><br>Test class: com.sysmatech.TestCases.Tc_Asset_GenerateLabelsCreate_039</td>
+<td></td>
+<td>24</td>
+<td>com.sysmatech.TestCases.Tc_Asset_GenerateLabelsCreate_039@1b7cc17c</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesCreate_058.WOCategories2()'><b>WOCategories2</b><br>Test class: com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesCreate_058</td>
+<td></td>
+<td>30</td>
+<td>com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesCreate_058@2f9f7dcf</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Settings_WorkOrderPriority_Delete_057.CustomField()'><b>CustomField</b><br>Test class: com.sysmatech.TestCases.Tc_Settings_WorkOrderPriority_Delete_057</td>
+<td></td>
+<td>25</td>
+<td>com.sysmatech.TestCases.Tc_Settings_WorkOrderPriority_Delete_057@5b8dfcc1</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Asset_Edit_035.Edit()'><b>Edit</b><br>Test class: com.sysmatech.TestCases.Tc_Asset_Edit_035</td>
+<td></td>
+<td>58</td>
+<td>com.sysmatech.TestCases.Tc_Asset_Edit_035@49139829</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Settings_WorkOrderPriority_Update_056.CustomField()'><b>CustomField</b><br>Test class: com.sysmatech.TestCases.Tc_Settings_WorkOrderPriority_Update_056</td>
+<td></td>
+<td>30</td>
+<td>com.sysmatech.TestCases.Tc_Settings_WorkOrderPriority_Update_056@72967906</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesCreate_058.WOCategories1()'><b>WOCategories1</b><br>Test class: com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesCreate_058</td>
+<td></td>
+<td>47</td>
+<td>com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesCreate_058@2f9f7dcf</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesUpdate_59.WOCategoriesUpdate()'><b>WOCategoriesUpdate</b><br>Test class: com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesUpdate_59</td>
+<td></td>
+<td>36</td>
+<td>com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesUpdate_59@747ddf94</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Asset_Create_034.CreateAssert()'><b>CreateAssert</b><br>Test class: com.sysmatech.TestCases.Tc_Asset_Create_034<br>Parameters: Rakesh11, us-9876, 7865, AutomationModel, Ready to Deploy, AutomationAsset, 19-Jan-23, AutomationSupplier, 1234, 35000, 6, ….., Parola</td>
+<td></td>
+<td>52</td>
+<td>com.sysmatech.TestCases.Tc_Asset_Create_034@2b662a77</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Settings_WorkOrderPriorityCreate_055.WOPrioritiesCreate()'><b>WOPrioritiesCreate</b><br>Test class: com.sysmatech.TestCases.Tc_Settings_WorkOrderPriorityCreate_055</td>
+<td></td>
+<td>39</td>
+<td>com.sysmatech.TestCases.Tc_Settings_WorkOrderPriorityCreate_055@1a482e36</td></tr>
+<tr>
+<td title='com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060.WOCategoriesDelete()'><b>WOCategoriesDelete</b><br>Test class: com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060</td>
+<td></td>
+<td>36</td>
+<td>com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060@35e2d654</td></tr>
 </table><p>
 </body>
 </html>

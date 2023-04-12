@@ -15,14 +15,14 @@ import dev.failsafe.internal.util.Assert;
 public class Tc_LoginTest_001 extends BaseClass{
 	LoginPage lp;
 	
-	@Test
+	@Test(priority = 1)
 	public void loginTest() throws IOException, InterruptedException {
 	    lp=new LoginPage(driver);
 	  
 	   
 	    String	ActualCurrentUrl1=driver.getCurrentUrl();
 		System.out.println(ActualCurrentUrl1);
-		org.testng.Assert.assertEquals(ActualCurrentUrl1, "https://uat.sysmatech.com/public/login");
+		org.testng.Assert.assertEquals(ActualCurrentUrl1, "https://qa.sysmatech.com/public/login");
 		
 		String ActualTitle1=driver.getTitle();
 		System.out.println(ActualTitle1);

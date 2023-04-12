@@ -18,10 +18,13 @@ WebDriver ldriver;
 	WebElement ClickPrevM;
 	@FindBy(xpath="//a[normalize-space()=\"Scheduler\"]")
 	WebElement ClickScheduler;
-	@FindBy(xpath = "/html/body/div[1]/div/section[2]/div[3]/div/div/div/div[1]/div[3]/div[2]/table/tbody/tr[1]/td[7]/a[3]")
+	@FindBy(xpath = "(//input[@type='search'])[1]")
+	WebElement BtnSearch;
+	@FindBy(xpath = "(//a[@title='Update'])[1]")
 	WebElement UpdateBtn;
 	@FindBy(xpath = "(//input[@id='name'])[1]")
 	WebElement TxtName;
+	
 	@FindBy(xpath = "//button[contains(text(),'Save')]")
 	WebElement SaveBtn;
 	public void SetPrevM() throws InterruptedException
@@ -35,7 +38,11 @@ WebDriver ldriver;
 	{
 		ClickScheduler.click();
 	}    
-	public void SetUpdateBtn() {
+	public void SetSearchBtn(String search) {
+	BtnSearch.sendKeys(search);
+	}
+	public void SetUpdateBtn() throws InterruptedException {
+		Thread.sleep(2000);
 		UpdateBtn.click();
 	}
 	public void SetName(String name) {

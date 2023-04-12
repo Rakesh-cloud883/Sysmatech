@@ -44,10 +44,14 @@ WebDriver ldriver;
 	
 	}
 
-	public void SetSearchBtn() throws InterruptedException { 
+	public void SetSearchBtn(String value) throws InterruptedException { 
 		JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(850,0)", "");
-		 Thread.sleep(3000);
+		 btnSearch.sendKeys(value);
+		
+	}
+	public void SetCopyAsset() throws InterruptedException {
+		Thread.sleep(4000);
 		 btnCopy.click();
 	}
 	public void SetSave()

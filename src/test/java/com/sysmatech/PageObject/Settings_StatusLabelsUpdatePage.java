@@ -17,9 +17,11 @@ public class Settings_StatusLabelsUpdatePage {
 		WebElement btnsetting;
 	 @FindBy(xpath =  "(//a[normalize-space()='Status Labels'])[1]")
 		WebElement btnStatusLabels;
+	 @FindBy(xpath = "(//input[@type='search'])[1]")
+	 WebElement BtnSearch;
 	 @FindBy(xpath =  "(//a[@title='Update'])[1]")
 		WebElement btnUpdate;
-	 @FindBy(xpath =  "(//input[@id='name'])[1]")
+	 @FindBy(id =  "name") //(//input[@id='name'])[1]
 		WebElement TxtName;
 	 @FindBy(xpath =  "(//span[@role='presentation'])[1]")
 		WebElement ClickSelectStatusType1;
@@ -39,12 +41,18 @@ public class Settings_StatusLabelsUpdatePage {
 	 public void SetStatusLabelsBtn() {
 		 btnStatusLabels.click();
 	 }
-	 public void SetUpdateBtn() {
+	 public void SetSearchBtn(String sname) throws InterruptedException {
+		 Thread.sleep(3000);
+		 BtnSearch.sendKeys(sname);
+	 }
+	 public void SetUpdateBtn() throws InterruptedException {
 		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(150,0)", "");
+		 Thread.sleep(3000);
 		 btnUpdate.click(); 
 	 }
 	 public void SetName(String name) {
+		 TxtName.clear();
 		 TxtName.sendKeys(name);
 	 }
 	 public void SetStatusType(String search) {

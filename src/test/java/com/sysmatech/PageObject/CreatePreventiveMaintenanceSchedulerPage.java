@@ -27,7 +27,7 @@ WebDriver ldriver;
 	WebElement txtAuditName;
 //	@FindBy(xpath="(//option[@value='589'])[1]")
 //	WebElement ClickSelectAssetModel;
-	@FindBy(xpath="(//option[@value='590'])[1]")
+	@FindBy(xpath="(//option[@value='529'])[1]")
 	WebElement ClickSelectAssetModel;
 	@FindBy(xpath="//select[@name=\"assign_parameter[]\"]")
 	WebElement ClickSelectAssignParameter;
@@ -35,13 +35,13 @@ WebDriver ldriver;
 	@FindBy(xpath="//div[5]//div[1]//select[1]")
 	WebElement ClickSelectCompany;
 	
-	@FindBy(xpath="//option[normalize-space()=\"Rakesh1111\"]")
+	@FindBy(xpath="//option[normalize-space()=\"Rakesh11\"]")
 	WebElement ClickSelectCompany1;
 	
 
 //	@FindBy(xpath="//option[normalize-space()=\"R1\"]")
 //	WebElement ClickSelectLocation;
-	@FindBy(xpath="(//option[@value='129'])[1]")
+	@FindBy(xpath="(//option[@value='80'])[1]")
 	WebElement ClickSelectLocation;
 	
 	
@@ -54,6 +54,13 @@ WebDriver ldriver;
 	
 	@FindBy(xpath= "//option[@value=\"Hourly\"]")
 	WebElement ClickSelectAuditFrequencyHours;
+	@FindBy(xpath = "(//option[@value='1'][normalize-space()='1'])[1]")
+	WebElement ClickSelectEachHours;
+	
+	@FindBy(xpath = "(//input[@value='recur_specific'])[1]")
+	WebElement ClickSelectRecurs_Specific_HoursOption;
+	@FindBy(xpath = "(//input[@value='1'])[1]")
+	WebElement ClickSelectRecurs_Sp_Hours;
 	
 	@FindBy(xpath= "//option[@value=\"Daily\"]")
 	WebElement ClickSelectAuditFrequencyDaily;
@@ -63,11 +70,17 @@ WebDriver ldriver;
 	@FindBy(xpath= "(//option[@value='15'][normalize-space()='15'])[2]")
 	WebElement ClickSelectAuditFrequencyMonthlyDay;
 	
+//	@FindBy(xpath = "")
+//	WebElement 
+	
+	Select s1;
+	
 	@FindBy(xpath= "(//option[@value='Bi-annually'])[1]")
 	WebElement ClickSelectAuditFrequencyBiAnnualy;
 	
 	@FindBy(xpath= "(//option[@value='Quarterly'])[1]")
 	WebElement ClickSelectAuditFrequencyQuaterly;
+	
 	@FindBy(xpath="(//option[@value='Yearly'])[1]")
 	WebElement ClickSelectAuditFrequancyYearly;
 	
@@ -120,8 +133,8 @@ WebDriver ldriver;
 		ClickSelectAssetModel.click();
 	}
 	public void SetAssignparameter() {
-		Select s1= new Select(ClickSelectAssignParameter);
-		s1.selectByVisibleText("Test 1-Daily");
+		 s1= new Select(ClickSelectAssignParameter);
+		s1.selectByVisibleText("Automation");  //"Automation"
 
 	}
 	public void SetSelectCompany() {
@@ -131,7 +144,7 @@ WebDriver ldriver;
 		
 	}
 	public void SetLocation() {
-		ClickSelectLocation.click();
+	 ClickSelectLocation.click();
 	}
 	public void SetAuditFequencyWeekly() {
 		JavascriptExecutor js=(JavascriptExecutor)ldriver;
@@ -160,8 +173,18 @@ WebDriver ldriver;
 	public void SetAuditFequencyHoursly() {
 		ClickSelectAuditFrequencyHours.click();
 		
+		
 	}
-	
+	public void SetAuditFequencyEachHours() {
+		ClickSelectEachHours.click();
+	}
+	public void SetAuditFequencyRecursSpecificHoursHours() {
+		ClickSelectRecurs_Specific_HoursOption.click();
+		ClickSelectRecurs_Sp_Hours.click();
+	}
+	public void SetAuditFequencyYearly() {
+		ClickSelectAuditFrequancyYearly.click();
+	}
 	public void SetauditEvery(String Avalue) {
 		ClickSelectLocation.click();
 		JavascriptExecutor js = (JavascriptExecutor)ldriver;

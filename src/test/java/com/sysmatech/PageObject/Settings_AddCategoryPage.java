@@ -14,15 +14,17 @@ WebDriver ldriver;
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
+	@FindBy(xpath = "(//a[@class='sidebar-toggle btn btn-white'])[1]")  ////a[contains(@class,'sidebar-toggle btn btn-white')]
+    WebElement BtnMenu;
 	@FindBy(xpath =  "//a[@href='#'][contains(.,'Settings')]")
 	WebElement btnsetting;
 	
-	@FindBy(xpath =  "//a[@href='https://uat.sysmatech.com/public/categories'][contains(.,'Categories')]")
+	@FindBy(xpath =  "//a[contains(text(),'Categories')]")  //  (//a[normalize-space()='Categories'])[1]
 	WebElement btnCategory;
 	@FindBy(xpath =  "//a[contains(@class,'btn btn-primary pull-right')]")
 	WebElement btnCreateCategory;
 	
-	@FindBy(xpath =  "//input[contains(@id,'name')]")
+	@FindBy(id =  "name") //   //input[contains(@id,'name')]
 	WebElement txtCategoryName;
 	
 	@FindBy(xpath =  "//span[@class='select2-selection__rendered needsclick'][contains(@id,'select-container')][contains(.,'Select Company')]")
@@ -40,17 +42,29 @@ WebDriver ldriver;
 	@FindBy(xpath =  "(//li[contains(@role,'option')])[1]")
 	WebElement btnSelectType3;
 	
+	@FindBy(xpath = "(//ins[@class='iCheck-helper'])[2]")
+	WebElement ClickConfAssetCategory;
+	
+	@FindBy(xpath = "(//ins[@class='iCheck-helper'])[3]")
+	WebElement ClickEmailSendCICO;
+	
+	
 	@FindBy(xpath =  "//button[contains(text(),\"Save\")]")
 	WebElement btnSavaCategory;
 	
 	@FindBy(xpath =  "(//a[@class='btn btn-link text-left'][normalize-space()='Cancel'])[2]")
 	WebElement btnCancelCategory;
 	
+	
+	public void SetMenuBtn() {
+		  BtnMenu.click();
+	  }
+	
 	public void SetSetting() throws InterruptedException
 	{
 		
 		JavascriptExecutor js = (JavascriptExecutor)ldriver;
-		 js.executeScript("window.scrollBy(0,350)", "");
+		 js.executeScript("window.scrollBy(0,750)", "");
 		btnsetting.click();
 		btnCategory.click();
 		btnCreateCategory.click();
@@ -77,7 +91,14 @@ WebDriver ldriver;
 		txtSelectType2.sendKeys(Cname);
 		btnSelectType3.click();
 	}
-	
+	public void SetConfiAssetCategoryClick() {
+		JavascriptExecutor js = (JavascriptExecutor)ldriver;
+		 js.executeScript("window.scrollBy(0,350)", "");
+		ClickConfAssetCategory.click();
+	}
+	public void SetEamilCiCO() {
+		ClickEmailSendCICO.click();
+	}
 	public void SetSaveCategory() throws InterruptedException
 	{
 

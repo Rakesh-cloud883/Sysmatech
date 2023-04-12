@@ -179,7 +179,7 @@ WebDriver ldriver;
 	}
 	public void SetAddOption2() {
 		BtnAddOption2.click();
-		Alert alert=ldriver.switchTo().alert();
+		Alert alert=ldriver.switchTo().alert();     
 		alert.accept();
 	}
 	public void SetRemoveOption2(){

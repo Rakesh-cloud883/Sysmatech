@@ -16,7 +16,10 @@ public Settings_ManufacturerDeletePage(WebDriver rdriver) {
 WebElement btnsetting;
 @FindBy(xpath = "//a[normalize-space()=\"Manufacturers\"]")
 WebElement BtnManufacturer;
-@FindBy(xpath="(//a[@class='btn btn-danger btn-sm delete-asset'])[1]")
+@FindBy(xpath = "(//input[@type='search'])[1]")
+WebElement btnSearch;
+//@FindBy(xpath="//body[1]/div[1]/div[1]/section[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[11]/nobr[1]/a[2]")
+@FindBy(xpath = "//a[contains(@class,'btn btn-danger btn-sm delete-asset')]")
 WebElement BtnDelete;
 @FindBy(xpath="(//button[normalize-space()='Yes'])[1]")
 WebElement BtnDeleteYes;
@@ -30,9 +33,17 @@ public void SetSettingBtn() {
 public void SetManufacturerBtn() {
 	BtnManufacturer.click();
 }
-public void SetDelete() {
-
-	BtnDelete.click();
-    BtnDeleteYes.click();
+public void SetSearchBtn(String search) throws InterruptedException {
+	btnSearch.clear();
+	Thread.sleep(3000);
+	btnSearch.sendKeys(search);
 }
+public void SetDelete() throws InterruptedException {
+   Thread.sleep(3000);
+	BtnDelete.click();
+    
+}
+public void SetYesDelete() {
+	BtnDeleteYes.click();
+ }
 }

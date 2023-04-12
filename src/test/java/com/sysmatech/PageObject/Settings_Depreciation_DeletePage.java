@@ -19,9 +19,12 @@ WebDriver ldriver;
       WebElement BtnMenu;
 	  @FindBy(xpath =  "//a[@href='#'][contains(.,'Settings')]")
 	  WebElement btnsetting;
-	  @FindBy(xpath ="(//a[@href='https://qa.sysmatech.com/public/depreciations'])[1]")
+	  @FindBy(xpath ="//a[contains(text(),'Depreciation')]")
 	  WebElement BtnDepreciation;
-	  @FindBy(xpath = "(//a[@class='btn btn-danger btn-sm delete-asset'])[1]")
+	  
+	  @FindBy(xpath = "(//input[@type='search'])[1]")
+	  WebElement BtnSearch;
+	  @FindBy(xpath = "(//a[@class='btn btn-danger btn-sm delete-asset' and @onclick='return false' or @data-title='Delete'])[1]")  //(//a[@class='btn btn-danger btn-sm delete-asset'])[1]
 	  WebElement BtnDelete;                                            
 	  @FindBy(xpath = "(//button[normalize-space()='Yes'])[1]")
 	  WebElement BtnYesDelete;
@@ -33,15 +36,23 @@ WebDriver ldriver;
 	   {
 		
 		JavascriptExecutor js = (JavascriptExecutor)ldriver;
-		 js.executeScript("window.scrollBy(0,350)", "");
+		 js.executeScript("window.scrollBy(0,700)", "");   //750
 		btnsetting.click();
 	   }
-	  public void SetDepreciationBtn() {
-		  JavascriptExecutor js=(JavascriptExecutor)ldriver;
-		  js.executeScript("window.scrollBy(0,250)", "");
+	 
+	  public void SetDepreciationBtn() throws InterruptedException {
+//		  JavascriptExecutor js=(JavascriptExecutor)ldriver;
+//		  js.executeScript("window.scrollBy(0,150)", "");
+		  Thread.sleep(2000);
 		  BtnDepreciation.click();
 	  }
-	  public void SetDeleteBtn() {
+	  public void SetSearchBtn(String search) throws InterruptedException {
+		//  btnsetting.clear();
+		  Thread.sleep(2000);
+		  BtnSearch.sendKeys(search);
+	  }
+	  public void SetDeleteBtn() throws InterruptedException {
+		  Thread.sleep(3000);
 		  BtnDelete.click();
 	  }
 	  public void SetDeleteYesBtn() {

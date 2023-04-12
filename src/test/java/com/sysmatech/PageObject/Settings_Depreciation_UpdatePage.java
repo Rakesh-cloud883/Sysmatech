@@ -20,13 +20,13 @@ public class Settings_Depreciation_UpdatePage {
       WebElement BtnMenu;
 	  @FindBy(xpath =  "//a[@href='#'][contains(.,'Settings')]")
 	  WebElement btnsetting;
-	  @FindBy(xpath ="(//a[@href='https://qa.sysmatech.com/public/depreciations'])[1]")
+	  @FindBy(xpath = "//a[contains(text(),'Depreciation')]")  //(//a[@href='https://qa.sysmatech.com/public/depreciations'])[1]
 	  WebElement BtnDepreciation;
-	  @FindBy(xpath = "(//a[@title='Update'])[1]")
+	  @FindBy(xpath = "(//a[@title='Update'])[1]") //
 	  WebElement BtnUpdate;
-	  @FindBy(xpath = "(//input[@id='name'])[1]")
+	  @FindBy(id = "name") //(//input[@id='name'])[1]
 	  WebElement TxtDepreciationName;
-	  @FindBy(xpath = "(//input[@id='months'])[1]")
+	  @FindBy(id = "months")  //(//input[@id='months'])[1]
 	  WebElement TxtNumberOfMonth;
 	  @FindBy(xpath = "(//input[@id='depreciation_min'])[1]")
 	  WebElement TxtMinimumValueafterDepreciation;
@@ -41,15 +41,17 @@ public class Settings_Depreciation_UpdatePage {
 	   {
 		
 		JavascriptExecutor js = (JavascriptExecutor)ldriver;
-		 js.executeScript("window.scrollBy(0,350)", "");
+		 js.executeScript("window.scrollBy(0,700)", "");  //750
 		btnsetting.click();
 	   }
-	  public void SetDepreciationBtn() {
-		  JavascriptExecutor js=(JavascriptExecutor)ldriver;
-		  js.executeScript("window.scrollBy(0,250)", "");
+	  public void SetDepreciationBtn() throws InterruptedException {
+		  Thread.sleep(2000);
+//		  JavascriptExecutor js=(JavascriptExecutor)ldriver;
+//		  js.executeScript("window.scrollBy(0,250)", "");
 		  BtnDepreciation.click();
 	  }
-	  public void SetUpdateBtn() {
+	  public void SetUpdateBtn() throws InterruptedException {
+		  Thread.sleep(3000);
 		  BtnUpdate.click();
 		  
 	  }
@@ -58,9 +60,11 @@ public class Settings_Depreciation_UpdatePage {
 		  TxtDepreciationName.sendKeys(name);
 	  }
 	  public void SetNumberOfMonth(String month) {
+		  TxtNumberOfMonth.clear();
 		  TxtNumberOfMonth.sendKeys(month);
 	  }
 	  public void SetMinimumValueafterDepreciation(String value) {
+		  TxtMinimumValueafterDepreciation.clear();
 		  TxtMinimumValueafterDepreciation.sendKeys(value);
 	  }
 	  public void SetSaveBtn() {

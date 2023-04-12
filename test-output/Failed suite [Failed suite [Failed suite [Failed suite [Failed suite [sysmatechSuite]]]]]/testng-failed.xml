@@ -4,13 +4,34 @@
   <test thread-count="5" name="sysmatechTest(failed)(failed)(failed)(failed)(failed)(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.sysmatech.TestCases.Tc_CreateAssetDelete_009">
+      <class name="com.sysmatech.TestCases.Tc_SettingSupplierUpdate_032">
         <methods>
           <include name="setUp"/>
-          <include name="Edit"/>
+          <include name="tearDown"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- com.sysmatech.TestCases.Tc_SettingSupplierUpdate_032 -->
+      <class name="com.sysmatech.TestCases.Tc_SettingCustomFieldDelete_015">
+        <methods>
+          <include name="setUp"/>
+          <include name="Login"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.sysmatech.TestCases.Tc_CreateAssetDelete_009 -->
+      </class> <!-- com.sysmatech.TestCases.Tc_SettingCustomFieldDelete_015 -->
+      <class name="com.sysmatech.TestCases.Tc_Settings_EscalationMatrix_036">
+        <methods>
+          <include name="Login"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sysmatech.TestCases.Tc_Settings_EscalationMatrix_036 -->
+      <class name="com.sysmatech.TestCases.Tc_Settings_Depreciation_Delete_048">
+        <methods>
+          <include name="Login"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sysmatech.TestCases.Tc_Settings_Depreciation_Delete_048 -->
     </classes>
   </test> <!-- sysmatechTest(failed)(failed)(failed)(failed)(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [Failed suite [sysmatechSuite]]]]]] -->

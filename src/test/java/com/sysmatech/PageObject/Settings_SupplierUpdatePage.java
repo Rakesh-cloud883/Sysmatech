@@ -19,35 +19,37 @@ public class Settings_SupplierUpdatePage {
 	WebElement btnsetting;
 	@FindBy(xpath = "(//a[normalize-space()='Suppliers'])[1]")
 	WebElement btnSupplier1;
+	@FindBy(xpath = "(//input[@type='search'])[1]")
+	WebElement BtnSearch;
 	@FindBy(xpath="(//a[@title='Update'])[1]")
 	WebElement btnUpdate;
-	@FindBy(xpath="(//input[@id='name'])[1]")
+	@FindBy(id="name")
 	WebElement TxtName;
-	@FindBy(xpath="//input[@id=\"address\"]")
+	@FindBy(id="address")
 	WebElement txtAddress;
-	@FindBy(xpath="(//input[@id='city'])[1]")
+	@FindBy(id="city")
 	WebElement txtCity;
-	@FindBy(xpath="//input[@id=\"state\"]")
+	@FindBy(id="state")
 	WebElement TxtState;
 	
-	@FindBy(xpath="(//span[@role='presentation'])[1]")
+	@FindBy(xpath="(//span[@role='presentation'])[2]")
 	WebElement ClickSelectCountry1;
 	@FindBy(xpath="(//input[@role='searchbox'])[1]")
 	WebElement ClickSelectCountry2;
 	@FindBy(xpath="/html/body/span/span/span[2]/ul/li[1]")
 	WebElement ClickSelectCountry3;
 	
-	@FindBy(xpath="(//input[@id='zip'])[1]")
+	@FindBy(id="zip")
 	WebElement Txtzip;
-	@FindBy(xpath="(//input[@id='contact'])[1]")
+	@FindBy(id="contact")
 	WebElement TxtContactName;
-	@FindBy(xpath="(//input[@id='phone'])[1]")
+	@FindBy(id="phone")
 	WebElement txtPhoneNo;
-	@FindBy(xpath="(//input[@id='fax'])[1]")
+	@FindBy(id="fax")
 	WebElement txtFax;
-	@FindBy(xpath= "(//input[@id='email'])[1]")
+	@FindBy(id= "email")
 	WebElement TxtEmail;
-	@FindBy(xpath="(//textarea[@id='notes'])[1]")
+	@FindBy(id="notes")
 	WebElement TxtNote;
 	
 	@FindBy(xpath="//button[contains(text(),\"Save\")]")
@@ -63,14 +65,23 @@ public class Settings_SupplierUpdatePage {
 	public void SetSupplier() {
 		btnSupplier1.click();
 	}
-	public void SetUpdate() {
+	public void SetSearch(String search) throws InterruptedException {
+		BtnSearch.clear();
+		Thread.sleep(3000);
+		BtnSearch.sendKeys(search);
+	}
+	public void SetUpdate() throws InterruptedException {
+		
+		Thread.sleep(3000);
 		btnUpdate.click();
 	}
 	public void SetName(String name) {
+		
 		TxtName.clear();
 		TxtName.sendKeys(name);
 	}
 	public void SetAddress(String add) {
+		txtAddress.clear();
 		txtAddress.sendKeys(add);
 	}
 	public void SetCity(String city) {
@@ -82,9 +93,12 @@ public class Settings_SupplierUpdatePage {
 		TxtState.clear();
 		TxtState.sendKeys(state);
 	}
-	public void SetCountry(String country) {
+	public void SetCountry(String country) throws InterruptedException {
+		
 		ClickSelectCountry1.click();
+		Thread.sleep(3000);
 		ClickSelectCountry2.sendKeys(country);
+		Thread.sleep(3000);
 		ClickSelectCountry3.click();
 	}
 	public void SetZip(String zip) {
@@ -108,6 +122,7 @@ public class Settings_SupplierUpdatePage {
 		TxtEmail.sendKeys(email);
 	}
 	public void SetNote(String note) {
+		TxtNote.clear();
 		TxtNote.sendKeys(note);
 	}
 	public void SetSaveBtn() {

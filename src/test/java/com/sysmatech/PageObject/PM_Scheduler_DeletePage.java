@@ -19,6 +19,8 @@ WebDriver ldriver;
 	WebElement ClickPrevM;
 	@FindBy(xpath="//a[normalize-space()=\"Scheduler\"]")
 	WebElement ClickScheduler;
+	@FindBy(xpath = "(//input[@type='search'])[1]")
+	WebElement BtnSearch;
 	@FindBy(xpath = "//body[1]/div[1]/div[1]/section[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[7]/a[4]")
 	WebElement DeleteBtn;
 	
@@ -35,7 +37,12 @@ WebDriver ldriver;
   {
 	ClickScheduler.click();
   }    
-  public void SetDeleteBtn() {
+   public void SetSearchBtn(String search) throws InterruptedException {
+	   Thread.sleep(1000);
+		BtnSearch.sendKeys(search);
+		}
+  public void SetDeleteBtn() throws InterruptedException {
+	  Thread.sleep(2000);
 	  DeleteBtn.click();
 	  Alert alert=ldriver.switchTo().alert();
 	  alert.accept();

@@ -2,15 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Failed suite [sysmatechSuite]]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="sysmatechTest(failed)(failed)">
-    <parameter name="browser" value="ie"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.sysmatech.TestCases.Tc_Settings_Departmentdelete_45">
+      <class name="com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060">
         <methods>
-          <include name="Login"/>
           <include name="setUp"/>
+          <include name="WOCategoriesDelete"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.sysmatech.TestCases.Tc_Settings_Departmentdelete_45 -->
+      </class> <!-- com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060 -->
     </classes>
   </test> <!-- sysmatechTest(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [sysmatechSuite]] -->

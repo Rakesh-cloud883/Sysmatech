@@ -4,13 +4,34 @@
   <test thread-count="5" name="sysmatechTest(failed)(failed)(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.sysmatech.TestCases.Tc_CreateAssetCopy_008">
+      <class name="com.sysmatech.TestCases.Tc_Settings_ManufacturerViewDelete_008">
         <methods>
-          <include name="Edit"/>
+          <include name="setUp"/>
+          <include name="ManufacturerViewdelete2"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sysmatech.TestCases.Tc_Settings_ManufacturerViewDelete_008 -->
+      <class name="com.sysmatech.TestCases.Tc_Settings_DepartMentsUpdate_016">
+        <methods>
+          <include name="setUp"/>
+          <include name="DepartmentUpdate"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sysmatech.TestCases.Tc_Settings_DepartMentsUpdate_016 -->
+      <class name="com.sysmatech.TestCases.Tc_Settings_CustomFieldCreateNew_024">
+        <methods>
+          <include name="CustomField"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.sysmatech.TestCases.Tc_CreateAssetCopy_008 -->
+      </class> <!-- com.sysmatech.TestCases.Tc_Settings_CustomFieldCreateNew_024 -->
+      <class name="com.sysmatech.TestCases.Tc_Settings_Depreciation_Delete_019">
+        <methods>
+          <include name="DepreciationDelete"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sysmatech.TestCases.Tc_Settings_Depreciation_Delete_019 -->
     </classes>
   </test> <!-- sysmatechTest(failed)(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Failed suite [sysmatechSuite]]] -->

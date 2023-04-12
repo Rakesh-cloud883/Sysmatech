@@ -27,10 +27,10 @@ WebDriver ldriver;
 	WebElement ClickEdit3;
 	
 	@FindBy(xpath =  "//input[@placeholder=\"Search\"]")
-	WebElement btnSearch;
-	@FindBy(xpath =  "(//a[@class='btn btn-danger btn-sm delete-asset'])[1]")
+	WebElement btnSearch; 
+	@FindBy(xpath =  "(//a[@class='btn btn-danger btn-sm delete-asset' or @onclick=\"return false\"])[1]")   // (//a[@class='btn btn-danger btn-sm delete-asset'])[1]
 	WebElement btnDelete;
-	@FindBy(xpath =  "//*[@id=\"dataConfirmOK\"]")
+	@FindBy(id =  "dataConfirmOK")    ////*[@id=\"dataConfirmOK\"]
 	WebElement ClickDeleteYesBtn;
 	@FindBy(xpath =  "//*[@id=\"dataConfirmOK\"]")
 	WebElement ClickDeleteCancelBtn;
@@ -46,13 +46,18 @@ WebDriver ldriver;
 	
 	}
 
-	public void SetSearchBtn() throws InterruptedException { 
+	public void SetSearchBtn(String sname) throws InterruptedException { 
 	
 		JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(150,0)", "");
+	    btnSearch.clear();
 		 Thread.sleep(3000);
-		 btnDelete.click();
+		btnSearch.sendKeys(sname);
 		 
+	}
+	public void SetDeleteBtn() throws InterruptedException {
+		Thread.sleep(4000);
+		 btnDelete.click();
 	}
 	public void SetConfDeleteBtn() {
 		ClickDeleteYesBtn.click();

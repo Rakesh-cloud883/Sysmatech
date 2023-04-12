@@ -13,11 +13,16 @@ public class Settings_AssetModelsClonePage {
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
+	 @FindBy(xpath = "(//a[@class='sidebar-toggle btn btn-white'])[1]")
+	    WebElement BtnMenu;
+
 	 @FindBy(xpath =  "//a[@href='#'][contains(.,'Settings')]")
 		WebElement btnsetting;
 	 @FindBy(xpath =  "(//a[normalize-space()='Asset Models'])[1]")
 		WebElement btnAssetModels;
-	 @FindBy(xpath ="(//i[@aria-hidden='true'])[31]")
+	 @FindBy(xpath = "(//input[@type='search'])[1]")
+	 WebElement BtnSearch;
+	 @FindBy(xpath ="(//a[@title='Clone Item'])[1]")
 	 WebElement BtnClone;
 	 @FindBy(xpath ="(//input[@id='name'])[1]")
 	 WebElement TxtName;
@@ -25,7 +30,9 @@ public class Settings_AssetModelsClonePage {
 	 WebElement BtnSave;
 	 
 	
-	 
+	 public void SetMenuBtn() {
+		  BtnMenu.click();                                         
+	  }
 	 public void SetSetting() {
 		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(0,350)", "");
@@ -34,7 +41,13 @@ public class Settings_AssetModelsClonePage {
 	 public void SetAssetModelsBtn() {
 		 btnAssetModels.click();
 	 }
-	 public void SetCloneBtn() {
+	 public void SetSearchBtn(String search) throws InterruptedException {
+		 BtnSearch.clear();
+		 Thread.sleep(3000);
+		 BtnSearch.sendKeys(search);
+	 }
+	 public void SetCloneBtn() throws InterruptedException {
+		 Thread.sleep(4000);
 		BtnClone.click(); 
 	 }
 	

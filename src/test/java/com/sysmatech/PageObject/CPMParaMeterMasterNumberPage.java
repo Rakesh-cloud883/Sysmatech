@@ -73,6 +73,7 @@ WebDriver ldriver;
 	
 	
 	public void SetName(String name) {
+		TxtName.clear();
 		TxtName.sendKeys(name);
 	}
 	public void SetNumber() {

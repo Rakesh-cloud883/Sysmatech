@@ -18,8 +18,10 @@ WebDriver ldriver;
 	WebElement ClickPrevM;
 	@FindBy(xpath="//a[normalize-space()=\"Scheduler\"]")
 	WebElement ClickScheduler;
-	@FindBy(xpath = "/html/body/div[1]/div/section[2]/div[3]/div/div/div/div[1]/div[3]/div[2]/table/tbody/tr[1]/td[7]/a[2]")
+	@FindBy(xpath = "(//a[@title='Clone Item'])[2]")
 	WebElement CloneBtn;
+//	@FindBy(xpath = "(//option[@value='507'])[1]")
+//	WebElement ClickSelectAssetModel;
 	@FindBy(xpath = "(//button[contains(text(),'Save')])[1]")
 	WebElement SaveBtn;
 	
@@ -33,7 +35,10 @@ WebDriver ldriver;
 	public void SetSchedulerBtn()
 	{
 		ClickScheduler.click();
-	}    
+	}   
+//	public void SetAssetModel() {
+//		ClickSelectAssetModel.click();
+//	}
 	public void SetCloneBtn() {
 		
 		CloneBtn.click();

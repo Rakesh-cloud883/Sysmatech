@@ -19,7 +19,7 @@ WebDriver ldriver;
 	@FindBy(xpath =  "(//a[normalize-space()='List All'])[1]")
 	WebElement btnAssertList;
 	
-	@FindBy(xpath =  "(//span[@role='presentation'])[1]")
+	@FindBy(xpath =  "(//b[@role='presentation'])[1]")
 	WebElement ClickGenLablsDropdown;
 	@FindBy(xpath =  "//input[@role=\"searchbox\"]")
 	WebElement txtGenLabelsDropdown;
@@ -27,7 +27,7 @@ WebDriver ldriver;
 	WebElement ClickGenLablsDropdown1;
 	
 	@FindBy(xpath =  "(//input[@placeholder='Search'])[1]")
-	WebElement SearchBtn;
+	WebElement BtnSearch;
 	@FindBy(xpath =  "(//input[@name='btSelectItem'])[1]")
 	WebElement SelectGenLablsItem;
 	@FindBy(xpath =  "(//input[@name='btSelectItem'])[3]")
@@ -53,15 +53,22 @@ WebDriver ldriver;
 		ClickGenLablsDropdown1.click();
 		
 	}
-	public void SetClickGenerateLables() throws InterruptedException {
+	public void SetSearchBtn(String sname) throws InterruptedException {
+		BtnSearch.clear();
 		Thread.sleep(3000);
+		BtnSearch.sendKeys(sname);
+	}
+	public void SetClickGenerateLables() throws InterruptedException {
+		Thread.sleep(4000);
 		SelectGenLablsItem.click();
-		SelectGenLablsItem1.click();
-		SelectGenLablesItem2.click();
-		
-		ClickGo.click();
+//		SelectGenLablsItem1.click();
+//		SelectGenLablesItem2.click();                                    
 	//	ClickCancelbtn.click();
 		
+	}
+	public void SetGoBtn() throws InterruptedException {
+		Thread.sleep(1000);
+		ClickGo.click();
 	}
 	
 	

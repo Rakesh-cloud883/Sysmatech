@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.sysmatech.TestCases.Tc_Settings_Depreciation_Update_047">
+      <class name="com.sysmatech.TestCases.Tc_Settings_CreateCategory_004">
         <methods>
-          <include name="Login"/>
           <include name="setUp"/>
+          <include name="CreateCatogory"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.sysmatech.TestCases.Tc_Settings_Depreciation_Update_047 -->
+      </class> <!-- com.sysmatech.TestCases.Tc_Settings_CreateCategory_004 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

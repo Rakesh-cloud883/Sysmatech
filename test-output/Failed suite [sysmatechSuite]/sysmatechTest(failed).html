@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Mar 20 16:36:06 IST 2023</td>
+<td>Started on:</td><td>Tue Apr 11 17:39:45 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>102 seconds (102720 ms)</td>
+<tr><td>Total time:</td><td>32 seconds (32389 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.sysmatech.TestCases.Tc_Settings_Departmentdelete_45.Login()'><b>Login</b><br>Test class: com.sysmatech.TestCases.Tc_Settings_Departmentdelete_45</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[@class=&apos;btn btn-danger btn-sm delete-asset&apos;])[2]&quot;}
-  (Session info: MicrosoftEdge=109.0.1518.61)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+<td title='com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060.WOCategoriesDelete()'><b>WOCategoriesDelete</b><br>Test class: com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=111.0.5563.148)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
 Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [25ece1afdbee95be5b7c873f42a95e68, findElement {using=xpath, value=(//a[@class=&apos;btn btn-danger btn-sm delete-asset&apos;])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 109.0.1518.61, ms:edgeOptions: {debuggerAddress: localhost:60390}, msedge: {msedgedriverVersion: 109.0.1518.78 (4e4b32c38163..., userDataDir: C:\Users\rakesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60390/devtoo..., se:cdpVersion: 109.0.1518.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 25ece1afdbee95be5b7c873f42a95e68
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0965a76959ca3f8be840eb78e62a743c, clickElement {id=ccd9c1b3-8949-4dbb-9a7e-83c70c628f95}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\rakesh\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62792}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62792/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0965a76959ca3f8be840eb78e62a743c)] -&gt; xpath: (//a[@class=&apos;btn btn-danger btn-sm delete-asset &apos; or @data-title=&apos;Delete&apos;])[1]]
+Session ID: 0965a76959ca3f8be840eb78e62a743c
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -92,26 +93,24 @@ Session ID: 25ece1afdbee95be5b7c873f42a95e68
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
 	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
-	at com.sysmatech.PageObject.Setting_Department_DeletePage.SetDelete(Setting_Department_DeletePage.java:40)
-	at com.sysmatech.TestCases.Tc_Settings_Departmentdelete_45.Login(Tc_Settings_Departmentdelete_45.java:21)
+	at com.sysmatech.PageObject.Settings_WorkOrderCategories_DeletePage.SetDeleteBtn(Settings_WorkOrderCategories_DeletePage.java:54)
+	at com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060.WOCategoriesDelete(Tc_Settings_WorkOrderCategories_Delete_060.java:24)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1903051549", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1903051549'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[@class=&apos;btn btn-danger btn-sm delete-asset&apos;])[2]&quot;}
-  (Session info: MicrosoftEdge=109.0.1518.61)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace574746715", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace574746715'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=111.0.5563.148)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
 Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [25ece1afdbee95be5b7c873f42a95e68, findElement {using=xpath, value=(//a[@class=&apos;btn btn-danger btn-sm delete-asset&apos;])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 109.0.1518.61, ms:edgeOptions: {debuggerAddress: localhost:60390}, msedge: {msedgedriverVersion: 109.0.1518.78 (4e4b32c38163..., userDataDir: C:\Users\rakesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60390/devtoo..., se:cdpVersion: 109.0.1518.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 25ece1afdbee95be5b7c873f42a95e68
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0965a76959ca3f8be840eb78e62a743c, clickElement {id=ccd9c1b3-8949-4dbb-9a7e-83c70c628f95}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.148, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\rakesh\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62792}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62792/devtoo..., se:cdpVersion: 111.0.5563.148, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0965a76959ca3f8be840eb78e62a743c)] -&gt; xpath: (//a[@class=&apos;btn btn-danger btn-sm delete-asset &apos; or @data-title=&apos;Delete&apos;])[1]]
+Session ID: 0965a76959ca3f8be840eb78e62a743c
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -124,15 +123,16 @@ Session ID: 25ece1afdbee95be5b7c873f42a95e68
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
 	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
-	at com.sysmatech.PageObject.Setting_Department_DeletePage.SetDelete(Setting_Department_DeletePage.java:40)
-	at com.sysmatech.TestCases.Tc_Settings_Departmentdelete_45.Login(Tc_Settings_Departmentdelete_45.java:21)
+	at com.sysmatech.PageObject.Settings_WorkOrderCategories_DeletePage.SetDeleteBtn(Settings_WorkOrderCategories_DeletePage.java:54)
+	at com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060.WOCategoriesDelete(Tc_Settings_WorkOrderCategories_Delete_060.java:24)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -162,8 +162,8 @@ Session ID: 25ece1afdbee95be5b7c873f42a95e68
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>93</td>
-<td>com.sysmatech.TestCases.Tc_Settings_Departmentdelete_45@515aebb0</td></tr>
+<td>21</td>
+<td>com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060@515aebb0</td></tr>
 </table><p>
 </body>
 </html>

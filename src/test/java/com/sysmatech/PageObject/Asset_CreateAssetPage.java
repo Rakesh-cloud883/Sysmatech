@@ -21,7 +21,7 @@ WebDriver ldriver;
 	}
 	@FindBy(xpath =  "//a[contains(.,'Create New')]")
 	WebElement btnassets;
-	@FindBy(xpath = "//a[@href='https://uat.sysmatech.com/public/hardware/create'][contains(.,'Asset')]")
+	@FindBy(xpath = "(//a[@href='https://qa.sysmatech.com/public/hardware/create'])[1]")
 	WebElement btnasset;
 	
 	@FindBy(xpath   = "//span[@class='select2-selection__rendered needsclick'][contains(@id,'select-container')][contains(.,'Select Company')]")
@@ -31,9 +31,9 @@ WebDriver ldriver;
 	@FindBy(xpath = "//*[@id=\"select2-company_select-results\"]/li[1]/div")
 	WebElement txtselectcompany1;
 	
-	@FindBy(xpath = "//input[contains(@id,'asset_tag')]")
+	@FindBy(id = "asset_tag")   //   //input[contains(@id,'asset_tag')]
 	WebElement assetTag;
-	@FindBy(xpath = "//input[contains(@name,'serials[1]')]")
+	@FindBy(id = "serials[1]")   //  //input[contains(@name,'serials[1]')]
 	WebElement assetSeries;
 	
 	@FindBy(xpath = "//span[@class='select2-selection__rendered needsclick'][contains(@id,'id-container')][contains(.,'Select a Model')]")
@@ -72,7 +72,7 @@ WebDriver ldriver;
 	WebElement ClickcheckoutLocationBtn;
 
 	
-	@FindBy(xpath = "//input[contains(@id,'name')]")
+	@FindBy(id = "name")   ////input[contains(@id,'name')]
 	WebElement txtAssetname;
 	@FindBy(xpath = "//input[@type='text'][contains(@id,'date')]")
 	WebElement selectcelenderData;
@@ -84,15 +84,15 @@ WebDriver ldriver;
 	@FindBy(xpath = "(//div[contains(@class,'clearfix')])[1]")
 	WebElement txtselectSupplier1;
 	
-	@FindBy(xpath = "//input[@class='form-control'][contains(@id,'number')]")
+	@FindBy(id = "order_number")  ////input[@class='form-control'][contains(@id,'number')]
 	WebElement txtOrderNo;
-	@FindBy(xpath = "//input[@class='form-control'][contains(@id,'cost')]")
+	@FindBy(id = "purchase_cost")    ////input[@class='form-control'][contains(@id,'cost')]
 	WebElement txtPurchaseCost;
 	
 	@FindBy(id  = "warranty_months")
 	WebElement selectworranty;
 	
-	@FindBy(xpath = "//textarea[contains(@id,'notes')]")
+	@FindBy(id = "notes")   // //textarea[contains(@id,'notes')]
 	WebElement txtNote;
 	
 	@FindBy(xpath = "(//span[@role='presentation'])[7]")
@@ -103,7 +103,7 @@ WebDriver ldriver;
 	WebElement txtselectLocation1;
 	
 
-	@FindBy(xpath = "(//i[@class='fa fa-check icon-white'])[2]")
+	@FindBy(xpath = "(//button[@class='btn btn-primary' or  @fdprocessedid='nvij6v'])[1]")   //(//i[@class='fa fa-check icon-white'])[2]
 	WebElement btnSubmiSave;
 	@FindBy(xpath = "(//a[@class='btn btn-link text-left'][normalize-space()='Cancel'])[2]")
 	WebElement BtnCancel;

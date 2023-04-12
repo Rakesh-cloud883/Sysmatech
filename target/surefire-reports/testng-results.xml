@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-11T14:02:24 IST" name="sysmatechSuite" finished-at="2023-04-11T14:04:33 IST" duration-ms="129518">
+    <groups>
+    </groups>
+    <test started-at="2023-04-11T14:02:24 IST" name="sysmatechTest" finished-at="2023-04-11T14:04:33 IST" duration-ms="129518">
+      <class name="com.sysmatech.TestCases.Tc_Settings_ManufacturerUpdate_007">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.sysmatech.TestCases.Tc_Settings_ManufacturerUpdate_007@dd8ba08]" started-at="2023-04-11T14:03:55 IST" name="setUp" finished-at="2023-04-11T14:03:59 IST" duration-ms="4733" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ManufacturerUpdate()[pri:0, instance:com.sysmatech.TestCases.Tc_Settings_ManufacturerUpdate_007@dd8ba08]" started-at="2023-04-11T14:03:59 IST" name="ManufacturerUpdate" finished-at="2023-04-11T14:04:32 IST" duration-ms="32914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ManufacturerUpdate -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sysmatech.TestCases.Tc_Settings_ManufacturerUpdate_007@dd8ba08]" started-at="2023-04-11T14:04:32 IST" name="tearDown" finished-at="2023-04-11T14:04:33 IST" duration-ms="854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sysmatech.TestCases.Tc_Settings_ManufacturerUpdate_007 -->
+      <class name="com.sysmatech.TestCases.Tc_Settings_ManufacturerCreate_005">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.sysmatech.TestCases.Tc_Settings_ManufacturerCreate_005@7ec7ffd3]" started-at="2023-04-11T14:02:24 IST" name="setUp" finished-at="2023-04-11T14:02:33 IST" duration-ms="9189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Manufacture1(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.sysmatech.TestCases.Tc_Settings_ManufacturerCreate_005@7ec7ffd3]" started-at="2023-04-11T14:02:35 IST" name="Manufacture1" data-provider="LoginData2" finished-at="2023-04-11T14:03:06 IST" duration-ms="30920" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Automation1Manufacturer11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123411]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Automation@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Manufacture1 -->
+        <test-method signature="Manufacture1(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.sysmatech.TestCases.Tc_Settings_ManufacturerCreate_005@7ec7ffd3]" started-at="2023-04-11T14:03:06 IST" name="Manufacture1" data-provider="LoginData2" finished-at="2023-04-11T14:03:30 IST" duration-ms="24504" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Manufacture1 -->
+        <test-method signature="Manufacture1(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.sysmatech.TestCases.Tc_Settings_ManufacturerCreate_005@7ec7ffd3]" started-at="2023-04-11T14:03:30 IST" name="Manufacture1" data-provider="LoginData2" finished-at="2023-04-11T14:03:54 IST" duration-ms="23522" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Manufacture1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sysmatech.TestCases.Tc_Settings_ManufacturerCreate_005@7ec7ffd3]" started-at="2023-04-11T14:03:54 IST" name="tearDown" finished-at="2023-04-11T14:03:55 IST" duration-ms="619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sysmatech.TestCases.Tc_Settings_ManufacturerCreate_005 -->
+    </test> <!-- sysmatechTest -->
+  </suite> <!-- sysmatechSuite -->
+</testng-results>

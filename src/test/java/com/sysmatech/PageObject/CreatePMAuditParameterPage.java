@@ -23,7 +23,7 @@ WebDriver ldriver;
 	WebElement BtnCreate;
 	@FindBy(xpath =  "(//input[@id='audit_params_name'])[1]")
 	WebElement TxtAuditParaName;
-	@FindBy(xpath =  "(//option[@value='321'])[1]")
+	@FindBy(xpath =  "/html/body/div[1]/div/section[2]/div[2]/div/section[2]/div[2]/div/div/form/div/div[2]/div[3]/div/select/option[2]")
 	WebElement ClickSelectModel;
 //	@FindBy(xpath =  "(//option[@value='590'])[1]")  //Kamlesh bhai model 
 //	WebElement ClickSelectModel;

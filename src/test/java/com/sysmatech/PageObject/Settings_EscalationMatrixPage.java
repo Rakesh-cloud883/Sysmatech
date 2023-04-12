@@ -19,12 +19,13 @@ public class Settings_EscalationMatrixPage {
 	    WebElement ClickMenu;
 	    @FindBy(xpath =  "//a[@href='#'][contains(.,'Settings')]")
 		WebElement btnsetting;
-	    @FindBy(xpath =  "//a[normalize-space()='Escalation Matrix Config']")
+	    @FindBy(xpath =  "(//a[normalize-space()='Escalation Matrix Config'])[1]")
 	  	WebElement btnEscalationMatrix;
 	    @FindBy(xpath = "(//input[@type='search'])[1]")
 	    WebElement btnSearch;
 	    
-	    @FindBy(xpath="//body[1]/div[1]/div[1]/section[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[6]/a[2]")
+	//    @FindBy(xpath="//body[1]/div[1]/div[1]/section[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[6]/a[2]")
+	    @FindBy(xpath = "(//a[@title='Update'])[3]")
 	    WebElement updateBtn;
 	    @FindBy(xpath="(//ins[@class='iCheck-helper'])[1]")
 	    WebElement ClickActive;
@@ -36,6 +37,8 @@ public class Settings_EscalationMatrixPage {
 	    @FindBy(xpath="(//input[@name='levels[1][minutes]'])[1]")
 	    WebElement txtLevel1Minutes;
 	    
+	    @FindBy(xpath = "(//span[contains(@role,'presentation')][normalize-space()='×'])[1]")
+	    WebElement BtnCancel;
 	    @FindBy(xpath="(//input[@role='searchbox'])[1]")
 	    WebElement TxtEscalateTo1;
 	    @FindBy(xpath="/html/body/span/span/span/ul")
@@ -56,6 +59,8 @@ public class Settings_EscalationMatrixPage {
 	    @FindBy(xpath="(//input[@name='levels[2][minutes]'])[1]")
 	    WebElement txtLevel2Minutes;
 	    
+	    @FindBy(xpath = "(//span[contains(@role,'presentation')][normalize-space()='×'])[2]")
+	    WebElement BtnCancel2;
 	    @FindBy(xpath="(//span[@role='combobox'])[2]")
 	    WebElement TxtEscalateTo2;
 	    @FindBy(xpath="/html/body/span/span/span/ul")
@@ -76,6 +81,8 @@ public class Settings_EscalationMatrixPage {
 	    @FindBy(xpath="(//input[@name='levels[3][minutes]'])[1]")
 	    WebElement txtLevel3Minutes;
 	    
+	    @FindBy(xpath = "(//span[contains(@role,'presentation')][normalize-space()='×'])[3]")
+	    WebElement BtnCancel3;
 	    @FindBy(xpath="(//span[@role='combobox'])[3]")
 	    WebElement TxtEscalateTo3;
 	    @FindBy(xpath="/html/body/span/span/span/ul")
@@ -95,6 +102,8 @@ public class Settings_EscalationMatrixPage {
 	    @FindBy(xpath="(//input[@name='levels[4][minutes]'])[1]")
 	    WebElement txtLevel4Minutes;
 	    
+	    @FindBy(xpath = "(//span[contains(@role,'presentation')][normalize-space()='×'])[4]")
+	    WebElement BtnCancel4;
 	    @FindBy(xpath="(//span[@role='combobox'])[4]")
 	    WebElement TxtEscalateTo4;
 	    @FindBy(xpath="/html/body/span/span/span/ul")
@@ -114,13 +123,16 @@ public class Settings_EscalationMatrixPage {
 	    @FindBy(xpath="(//input[@name='levels[5][minutes]'])[1]")
 	    WebElement txtLevel5Minutes;
 	    
+	    @FindBy(xpath = "(//span[contains(@role,'presentation')][normalize-space()='×'])[5]")
+	    WebElement BtnCancel5;
 	    @FindBy(xpath="(//span[@role='combobox'])[5]")
 	    WebElement TxtEscalateTo5;
 	    @FindBy(xpath="/html/body/span/span/span/ul")
 	    WebElement EscalationToSelectUserL5;
 	    @FindBy(xpath ="(//ins[@class='iCheck-helper'])[2]")
 	    WebElement ClickEmailL5;
-	    @FindBy(xpath = "//body[1]/div[1]/div[1]/section[2]/div[3]/div[1]/form[1]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[5]/div[1]/label[1]/div[1]/ins[1]")
+	//    @FindBy(xpath = "//body[1]/div[1]/div[1]/section[2]/div[3]/div[1]/form[1]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[5]/div[1]/label[1]/div[1]/ins[1]")
+	    @FindBy(xpath = "//body[1]/div[1]/div[1]/section[2]/div[3]/div[1]/form[1]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[5]/td[5]/div[1]/label[1]/div[1]")
 	    WebElement ClickNotificationL5;
 	    @FindBy(xpath = "//body[1]/div[1]/div[1]/section[2]/div[3]/div[1]/form[1]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[5]/td[6]/div[1]/label[1]/div[1]/ins[1]")
 	    WebElement ClickStatusL5;
@@ -142,13 +154,18 @@ public class Settings_EscalationMatrixPage {
 		 Thread.sleep(3000);;
 //		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 //		 js.executeScript("window.scrollBy(0,150)", "");
+		
 		 btnEscalationMatrix.click();
 	 }
-	 public void SetSearchBtn(String search) {
+	 public void SetSearchBtn(String search) throws InterruptedException {
+		 Thread.sleep(3000);
 		 btnSearch.sendKeys(search);
 	 }
 	 
 	 public void SetUpdateBtn() throws InterruptedException {
+		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
+		 js.executeScript("window.scrollBy(0,150)", "");
+		
 		 Thread.sleep(3000);
 		 updateBtn.click();
 	 }
@@ -174,23 +191,25 @@ public class Settings_EscalationMatrixPage {
 		 txtLevel1Minutes.sendKeys(min);
 	 }
 	 public void SetEscalationTo(String esca) throws InterruptedException {
-		 TxtEscalateTo1.clear();
+	//	 BtnCancel.click();
+		 Thread.sleep(3000);
 		 TxtEscalateTo1.sendKeys(esca);
 		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(0,50)", "");
-		 Thread.sleep(2000);
+		 Thread.sleep(3000);
 		 EscalationToSelectUserL1.click();
+		
 	 }
 	 public void SetEmail() {
-		 ClickEmail.clear();
+		 ClickEmail.click();
 		 ClickEmail.click();
 	 }
 	 public void SetNotification() {
-		 ClickNotification.clear();
+		
 		 ClickNotification.click();
 	 }
 	 public void SetStatusClick() {
-		 ClickStatus.clear();
+		 ClickStatus.click();
 		 ClickStatus.click();
 	 }
 	 //--------------------------------------//-------------------------------------------------------////
@@ -207,6 +226,7 @@ public class Settings_EscalationMatrixPage {
 		 txtLevel2Minutes.sendKeys(L2min);
 	 }
 	 public void SetEscalationToL2(String L2esca) throws InterruptedException {
+//		 BtnCancel2.click();
 		 TxtEscalateTo2.sendKeys(L2esca);
 		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(0,50)", "");
@@ -214,13 +234,15 @@ public class Settings_EscalationMatrixPage {
 		 EscalationToSelectUserL2.click();
 	 }
 	 public void SetEmailL2() {
-		
+		 ClickEmailL2.click();
 		 ClickEmailL2.click();
 	 }
 	 public void SetNotificationL2() {
+		
 		 ClickNotificationL2.click();
 	 }
 	 public void SetStatusL2Click() {
+		 ClickStatus.click();
 		 ClickStatus.click();
 	 }
 	 
@@ -239,6 +261,7 @@ public class Settings_EscalationMatrixPage {
 		 txtLevel3Minutes.sendKeys(L3min);
 	 }
 	 public void SetEscalationToL3(String L3esca) throws InterruptedException {
+	//	 BtnCancel3.click();
 		 TxtEscalateTo3.sendKeys(L3esca);
 		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(0,150)", "");
@@ -247,11 +270,13 @@ public class Settings_EscalationMatrixPage {
 	 }
 	 public void SetEmailL3() {
 		 ClickEmailL3.click();
+		 ClickEmailL3.click();
 	 }
 	 public void SetNotificationL3() {
 		 ClickNotificationL3.click();
 	 }
 	 public void SetStatusL3Click() {
+		 ClickStatusL3.click();
 		 ClickStatusL3.click();
 	 }
 	 
@@ -269,6 +294,7 @@ public class Settings_EscalationMatrixPage {
 		 txtLevel4Minutes.sendKeys(L4min);
 	 }
 	 public void SetEscalationToL4(String L4esca) throws InterruptedException {
+	//	 BtnCancel4.click();
 		 TxtEscalateTo4.sendKeys(L4esca);
 		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(0,50)", "");
@@ -277,11 +303,13 @@ public class Settings_EscalationMatrixPage {
 	 }
 	 public void SetEmailL4() {
 		 ClickEmailL4.click();
+		 ClickEmailL4.click();
 	 }
 	 public void SetNotificationL4() {
 		 ClickNotificationL4.click();
 	 }
 	 public void SetStatusL4Click() {
+		 ClickStatusL4.click();
 		 ClickStatusL4.click();
 	 }
 	 
@@ -300,6 +328,7 @@ public class Settings_EscalationMatrixPage {
 		 txtLevel5Minutes.sendKeys(L5min);
 	 }
 	 public void SetEscalationToL5(String L5esca) throws InterruptedException {
+//		 BtnCancel5.click();
 		 TxtEscalateTo5.sendKeys(L5esca);
 		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(0,50)", "");
@@ -308,11 +337,13 @@ public class Settings_EscalationMatrixPage {
 	 }
 	 public void SetEmailL5() {
 		 ClickEmailL5.click();
+		 ClickEmailL5.click();
 	 }
 	 public void SetNotificationL5() {
 		 ClickNotificationL5.click();
 	 }
 	 public void SetStatusL5Click() {
+		 ClickStatusL5.click();
 		 ClickStatusL5.click();
 	 }
 	 

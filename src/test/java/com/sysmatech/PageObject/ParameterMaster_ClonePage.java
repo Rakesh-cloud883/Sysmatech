@@ -18,8 +18,10 @@ WebDriver ldriver;
 	WebElement ClickPrevM;
 	@FindBy(xpath =  "(//a[normalize-space()='Parameters Master'])[1]")
 	WebElement ClickPrevMBtn2;
-	@FindBy(xpath="(//i[@class='fa fa-copy'])[1]")
+	@FindBy(xpath="(//i[@class='fa fa-copy'])[2]")
 	WebElement CloneBtn;
+	@FindBy(xpath = "")
+	WebElement ClickSelectAssetModel;
 	@FindBy(xpath = "(//button[contains(text(),'Save')])[1]")
 	WebElement saveBtn;
 	

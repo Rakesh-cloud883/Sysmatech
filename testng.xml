@@ -1,63 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="sysmatechSuite">
+<suite name="sysmatechSuite" thread-count="5">
+	
+	<!--  <listeners>
+            <listener class-name="com.sysmatech.PageObject.RetryListener"/>
+        </listeners>   --> 
   <test  name="sysmatechTest">
 	  <parameter name="browser" value="chrome"></parameter>
-    <classes>
- <!--      
-          <class name="com.sysmatech.TestCases.Tc_LoginTest_001"/>
-          <class name="com.sysmatech.TestCases.Tc_LoginDDT_002"/>
-          <class name="com.sysmatech.TestCases.Tc_Settings_AddCompanyTest_003"/> 
-          <class name="com.sysmatech.TestCases.Tc_CreateAsset_004"/> 
-          <class name="com.sysmatech.TestCases.Tc_Settings_CreateCategory_005"/>
-          <class name="com.sysmatech.TestCases.Tc_ImportFile_006"/> 
-          <class name="com.sysmatech.TestCases.Tc_CreateAssetEdit_007"/> 
-          <class name="com.sysmatech.TestCases.Tc_CreateAssetCopy_008"/>     
-          <class name="com.sysmatech.TestCases.Tc_CreateAssetDelete_009"/>
-          <class name="com.sysmatech.TestCases.Tc_CreateAssetDeleteInBulk_010"/>         
-          <class name="com.sysmatech.TestCases.Tc_CreateAssetGenerateLabels_011"/>   
-          <class name="com.sysmatech.TestCases.Tc_CreateAssetBulkCheckOut_012"/>                
-          <class name="com.sysmatech.TestCases.Tc_CreatePreventiveMaintenanceScheduler_013"/>   
-          <class name="com.sysmatech.TestCases.Tc_SettingCustomFields_014"/>    
-          <class name="com.sysmatech.TestCases.Tc_SettingCustomFieldDelete_015"/>  
-          <class name="com.sysmatech.TestCases.Tc_SettingStatusLabels_016"/>   
-          <class name="com.sysmatech.TestCases.Tc_Setting_StatusLabelsUpdate_017"/>  
-          <class name="com.sysmatech.TestCases.Tc_SettingsStatusLabelsDelete_018"/> 
-          <class name="com.sysmatech.TestCases.Tc_SettingAssetModels_019"/>    
-          <class name="com.sysmatech.TestCases.Tc_SettingAssetModelsClone_020"/>  
-          <class name="com.sysmatech.TestCases.Tc_SettingAssetModelsUpdate_021"/> 
-          <class name="com.sysmatech.TestCases.Tc_SettingAssetModelsDelete_022"/>  
-          <class name="com.sysmatech.TestCases.Tc_SettingAssetModelsBulkEdit_023"/>  
-          <class name="com.sysmatech.TestCases.Tc_SettingAssetModelsBulkDelete_024"/>   
-          <class name="com.sysmatech.TestCases.Tc_SettingAssetModelsViewDelete_025"/>      
-          <class name="com.sysmatech.TestCases.Tc_SettingManufacturer_026"/>    
-          <class name="com.sysmatech.TestCases.Tc_SettingManufacturerUpdate_027"/>   
-          <class name="com.sysmatech.TestCases.Tc_SettingManufacturerDelete_028"/> 
-          <class name="com.sysmatech.TestCases.Tc_SettingManufacturerViewDelete_029"/>   
-          <class name="com.sysmatech.TestCases.Tc_SettingSupplier_030"/>  
-          <class name="com.sysmatech.TestCases.Tc_SettingSupplierDelete_031"/>    
-          <class name="com.sysmatech.TestCases.Tc_SettingSupplierUpdate_032"/>   
-          <class name="com.sysmatech.TestCases.Tc_CPMParaMeterNumber_034"/>
-          <class name="com.sysmatech.TestCases.Tc_CreatePMAuditParameter_035"/>  
-          <class name="com.sysmatech.TestCases.Tc_EscalationMatrix_036"/>   
-          <class name="com.sysmatech.TestCases.Tc_ParameterMaster_CloneTest_037"/>              
-          <class name="com.sysmatech.TestCases.Tc_ParameterMaster_Update_038"/>        
-          <class name="com.sysmatech.TestCases.Tc_ParameterMaster_Delete_039"/>  
-          <class name="com.sysmatech.TestCases.Tc_PM_Scheduler_Clone_040"/>    
-          <class name="com.sysmatech.TestCases.Tc_PM_Scheduler_Update_041"/>   
-          <class name="com.sysmatech.TestCases.Tc_PM_Scheduler_Delete_042"/>      
-          <class name="com.sysmatech.TestCases.Tc_Settings_Depertments_043"/>     
-          <class name="com.sysmatech.TestCases.Tc_Settings_DepartMentsUpdate_44"/>  
-          <class name="com.sysmatech.TestCases.Tc_Settings_Departmentdelete_45"/>  
-          <class name="com.sysmatech.TestCases.Tc_Settings_DepreciationCreate_046"/>  
-          <class name="com.sysmatech.TestCases.Tc_Settings_Depreciation_Update_047"/>   
-          <class name="com.sysmatech.TestCases.Tc_Settings_Depreciation_Delete_048"/>    
-          <class name="com.sysmatech.TestCases.Tc_Settings_PreventiveMaintenance_Config_049"/>   
-          <class name="com.sysmatech.TestCases.Tc_Settings_PreventiveMaintenance_Clone_050"/>   -->
-          <class name="com.sysmatech.TestCases.Tc_preventiveMaintenance_Update_051"/> 
+    <classes> 
+		
+	<!--       
+		       <class name="com.sysmatech.TestCases.Tc_Settings_Depreciation_Delete_019"/>         -->
+ 
+   <!--           <class name="com.sysmatech.TestCases.Tc_LoginTest_001"/>
+            <class name="com.sysmatech.TestCases.Tc_LoginDDT_002"/>
+            <class name="com.sysmatech.TestCases.Tc_Settings_AddCompanyTest_003"/> 
+            <class name="com.sysmatech.TestCases.Tc_Settings_CreateCategory_004"/>   -->
+            
+             <class name="com.sysmatech.TestCases.Tc_Settings_ManufacturerCreate_005"/>  
+             <class name="com.sysmatech.TestCases.Tc_Settings_ManufacturerDelete_006"/> 
+             <class name="com.sysmatech.TestCases.Tc_Settings_ManufacturerUpdate_007"/> 
+             <class name="com.sysmatech.TestCases.Tc_Settings_ManufacturerViewDelete_008"/>
           
+            <class name="com.sysmatech.TestCases.Tc_Settings_SupplierCreate_009"/> 
+            <class name="com.sysmatech.TestCases.Tc_Settings_SupplierDelete_010"/> 
+            <class name="com.sysmatech.TestCases.Tc_Settings_SupplierUpdate_011"/>
+             
+            <class name="com.sysmatech.TestCases.Tc_Settings_StatusLabelsCreate_012"/>     
+            <class name="com.sysmatech.TestCases.Tc_Settings_StatusLabelsDelete_013"/>
+            <class name="com.sysmatech.TestCases.Tc_Settings_StatusLabelsUpdate_0014"/> 
           
-     
-    </classes>
+            <class name="com.sysmatech.TestCases.Tc_Settings_DepertmentsCreate_055"/>    
+            <class name="com.sysmatech.TestCases.Tc_Settings_DepartmentDelete_15"/> 
+            <class name="com.sysmatech.TestCases.Tc_Settings_DepartMentsUpdate_016"/> 
+                                                                                                                    
+            <class name="com.sysmatech.TestCases.Tc_Settings_DepreciationCreate_018"/>             
+            <class name="com.sysmatech.TestCases.Tc_Settings_Depreciation_Update_020"/> 
+            
+            <class name="com.sysmatech.TestCases.Tc_Settings_WorkOrder_StatusesCreate_021"/>        
+            <class name="com.sysmatech.TestCases.Tc_Settings_WorkOrder_StatusesDelete_022"/> 
+            <class name="com.sysmatech.TestCases.Tc_Settings_WorkOrder_StatusesUpdate_023"/> 
+           
+            <class name="com.sysmatech.TestCases.Tc_Settings_CustomFieldCreateNew_024"/>   
+            <class name="com.sysmatech.TestCases.Tc_Settings_CustomFieldsCreate_025"/>    
+            <class name="com.sysmatech.TestCases.Tc_Settings_CustomFieldDelete_026"/> 
+           
+            <class name="com.sysmatech.TestCases.Tc_Asset_Create_034"/> 
+            <class name="com.sysmatech.TestCases.Tc_Asset_Edit_035"/> 
+            <class name="com.sysmatech.TestCases.Tc_Asset_Copy_036"/>     
+            <class name="com.sysmatech.TestCases.Tc_Asset_Delete_037"/>
+            <class name="com.sysmatech.TestCases.Tc_Asset_DeleteInBulk_038"/>         
+            <class name="com.sysmatech.TestCases.Tc_Asset_GenerateLabelsCreate_039"/>   
+            <class name="com.sysmatech.TestCases.Tc_Asset_BulkCheckOut_040"/>    
+                         
+            <class name="com.sysmatech.TestCases.Tc_Settings_WorkOrderPriorityCreate_055"/>
+            <class name="com.sysmatech.TestCases.Tc_Settings_WorkOrderPriority_Update_056"/>
+            <class name="com.sysmatech.TestCases.Tc_Settings_WorkOrderPriority_Delete_057"/> 
+           
+            <class name="com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesCreate_058"/>
+            <class name="com.sysmatech.TestCases.Tc_Settings_WorkOrder_CategoriesUpdate_59"/>
+            <class name="com.sysmatech.TestCases.Tc_Settings_WorkOrderCategories_Delete_060"/>  
+           
+            <class name="com.sysmatech.TestCases.Tc_Settings_AssetModelsCreate_027"/>    
+            <class name="com.sysmatech.TestCases.Tc_Settings_AssetModelsClone_028"/>  
+            <class name="com.sysmatech.TestCases.Tc_Settings_AssetModelsUpdate_029"/> 
+            <class name="com.sysmatech.TestCases.Tc_Settings_AssetModelsDelete_030"/>  
+            <class name="com.sysmatech.TestCases.Tc_Settings_AssetModelsBulkEdit_031"/>  
+            <class name="com.sysmatech.TestCases.Tc_Settings_AssetModelsBulkDelete_032"/>   
+            <class name="com.sysmatech.TestCases.Tc_Settings_AssetModelsViewDelete_033"/>
+                  
+            <class name="com.sysmatech.TestCases.Tc_CreatePMAuditParameter_041"/> 
+            <class name="com.sysmatech.TestCases.Tc_CPMParaMeterNumber_042"/>
+                          
+            <class name="com.sysmatech.TestCases.Tc_ParameterMaster_CloneTest_043"/>                     
+            <class name="com.sysmatech.TestCases.Tc_ParameterMaster_Delete_044"/>
+            <class name="com.sysmatech.TestCases.Tc_ParameterMaster_Update_045"/>
+            
+            <class name="com.sysmatech.TestCases.Tc_Settings_PreventiveMaintenance_ConfigCreate_046"/>   
+            <class name="com.sysmatech.TestCases.Tc_Settings_PreventiveMaintenance_Clone_047"/>   
+            <class name="com.sysmatech.TestCases.Tc_Settings_preventiveMaintenance_ConfigUpdate_048"/>    
+            <class name="com.sysmatech.TestCases.Tc_Settings_PreventiveMaintenanceConfig_Delete_049"/>  
+          
+            <class name="com.sysmatech.TestCases.Tc_CreatePreventiveMaintenanceScheduler_050"/>   
+            <class name="com.sysmatech.TestCases.Tc_PM_Scheduler_Clone_051"/>    
+            <class name="com.sysmatech.TestCases.Tc_PM_Scheduler_Update_052"/>   
+            <class name="com.sysmatech.TestCases.Tc_PM_Scheduler_Delete_053"/>                   
+                   
+          
+           
+         
+ 
+ 
+ 
+     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -13,10 +13,14 @@ public class Settings_AssetModelsBulkDeletePage {
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
+	 @FindBy(xpath = "(//a[@class='sidebar-toggle btn btn-white'])[1]")
+	    WebElement BtnMenu;
 	 @FindBy(xpath =  "//a[@href='#'][contains(.,'Settings')]")
 		WebElement btnsetting;
 	 @FindBy(xpath =  "(//a[normalize-space()='Asset Models'])[1]")
 		WebElement btnAssetModels;
+	 @FindBy(xpath = "(//input[@type='search'])[1]")
+	 WebElement BtnSearch;
 	 @FindBy(xpath =  "(//input[@name='btSelectItem'])[1]")
 		WebElement ClickSelectItem1;
 	 @FindBy(xpath =  "(//input[@name='btSelectItem'])[2]")
@@ -34,6 +38,9 @@ public class Settings_AssetModelsBulkDeletePage {
 		WebElement BtnDelete;
 	 
 	 
+	 public void SetMenuBtn() {
+		  BtnMenu.click();                                         
+	  }
 	 public void SetSetting() {
 		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(0,350)", "");
@@ -42,10 +49,15 @@ public class Settings_AssetModelsBulkDeletePage {
 	 public void SetAssetModelsBtn() {
 		 btnAssetModels.click();
 	 }
-	 
-	 public void SetBulkDelete(String Delete) {
+	 public void SetSearchBtn(String search) throws InterruptedException {
+		 BtnSearch.clear();
+		 Thread.sleep(3000);
+		 BtnSearch.sendKeys(search);
+	 }
+	 public void SetBulkDelete(String Delete) throws InterruptedException {
+		 Thread.sleep(3000);
 		 ClickSelectItem1.click();
-		 ClickSelectItem2.click();
+	//	 ClickSelectItem2.click();
 		 ClickSelectBulkEdit1.click();
 		 ClickSelectBulkEdit2.sendKeys(Delete);
 		 ClickSelectBulkEdit3.click();
@@ -53,7 +65,8 @@ public class Settings_AssetModelsBulkDeletePage {
 	 public void SetGoBtn() {
 		 BtnGo.click();
 	 }
-	 public void SetDeleteBtn() {
+	 public void SetDeleteBtn() throws InterruptedException {
+		 Thread.sleep(1000);
 		 BtnDelete.click();
 	 }
 	 

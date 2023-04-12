@@ -16,13 +16,15 @@ public class Settings_ManufacturerViewDeletePage {
 	WebElement btnsetting;
 	@FindBy(xpath = "//a[normalize-space()=\"Manufacturers\"]")
 	WebElement BtnManufacturer;
+	@FindBy(xpath = "(//input[@type='search'])[1]")
+	WebElement BtnSearch;
 	@FindBy(xpath="//a[normalize-space()=\"Show Deleted\"]")
 	WebElement BtnViewDelete;
-	@FindBy(xpath="(//a[@class='btn btn-danger btn-sm delete-asset'])[1]")
+	@FindBy(xpath ="(//a[@class='btn btn-danger btn-sm delete-asset' or  @onclick='return false'])[1]") // // (//a[@class='btn btn-danger btn-sm delete-asset'])[1]
 	WebElement btnDelete;
 	@FindBy(xpath="//button[@id=\"dataConfirmOK\"]")
 	WebElement BtnViewDeleteYes;
-	@FindBy(xpath="(//button[@title='Restore'])[1]")
+	@FindBy(xpath ="//button[@class='btn btn-sm btn-warning' or @title='Restore']") //(//i[@aria-hidden='true'])[36]
 	WebElement BtnRestore;
 	public void SetSettingBtn() {
 		JavascriptExecutor js=(JavascriptExecutor)ldriver;
@@ -32,16 +34,27 @@ public class Settings_ManufacturerViewDeletePage {
 	public void SetManufacturerBtn() {
 		BtnManufacturer.click();
 	}
+	
 	public void setViewDelete() {
+		
 		 BtnViewDelete.click();
 	}
-	public void SetDelete() {
-       
+	public void SetSearch(String search) throws InterruptedException {
+		
+		BtnSearch.clear();
+		Thread.sleep(3000);
+		BtnSearch.sendKeys(search);
+		
+	}
+	
+	public void SetDelete() throws InterruptedException {
+  //     Thread.sleep(1000);
 		btnDelete.click();
 		BtnViewDeleteYes.click();
 	}
 	
-	public void SetRestore() {
+	public void SetRestore() throws InterruptedException {
+//		Thread.sleep(1000);
 		BtnRestore.click();
 	}
 }

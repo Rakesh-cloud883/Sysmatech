@@ -4,13 +4,13 @@
   <test thread-count="5" name="sysmatechTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.sysmatech.TestCases.Tc_preventiveMaintenance_Update_051">
+      <class name="com.sysmatech.TestCases.Tc_Asset_BulkCheckOut_040">
         <methods>
+          <include name="BulkCheckout"/>
           <include name="setUp"/>
-          <include name="CreatePreventive_Maintenance_Clone"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.sysmatech.TestCases.Tc_preventiveMaintenance_Update_051 -->
+      </class> <!-- com.sysmatech.TestCases.Tc_Asset_BulkCheckOut_040 -->
     </classes>
   </test> <!-- sysmatechTest(failed) -->
 </suite> <!-- Failed suite [sysmatechSuite] -->

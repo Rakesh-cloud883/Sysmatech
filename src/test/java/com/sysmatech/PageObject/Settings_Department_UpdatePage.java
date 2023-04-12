@@ -20,7 +20,7 @@ public class Settings_Department_UpdatePage {
 	 WebElement BtnDepertment;
 	 @FindBy(xpath="(//a[@title='Update'])[2]")
 	 WebElement UpdateBtn;
-	 @FindBy(xpath="(//input[@id='name'])[1]")
+	 @FindBy(id="name") //(//input[@id='name'])[1]
 	 WebElement TxtDepartmentName;
 	 
 	 @FindBy(xpath="(//span[@role='presentation'])[1]")
@@ -62,7 +62,8 @@ public class Settings_Department_UpdatePage {
 	 public void SetDepertmentBtn() {
 		 BtnDepertment.click();
 	 }
-	 public void SetUpdateBtn() {
+	 public void SetUpdateBtn() throws InterruptedException {
+		 Thread.sleep(3000);
 		 UpdateBtn.click();
 	 }
 	 public void SetDepartmentName(String Dname) {
@@ -70,11 +71,11 @@ public class Settings_Department_UpdatePage {
 		 TxtDepartmentName.sendKeys(Dname);
 	 }
 	 
-	 public void SetCompany(String company) {
-		 ClickSelectCompany.click();
-		 TxtCompany.sendKeys(company);
-		 ClickCompany.click();
-	 }
+//	 public void SetCompany(String company) {
+//		 ClickSelectCompany.click();
+//		 TxtCompany.sendKeys(company);
+//		 ClickCompany.click();
+//	 }
 	 public void SetManager(String manager) {
 		ClickSelectManager.click();
 		TxtManager.sendKeys(manager);

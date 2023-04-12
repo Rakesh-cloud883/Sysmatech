@@ -13,14 +13,23 @@ public class Settings_AssetModelsDeletePage {
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
+	 
+	 @FindBy(xpath = "(//a[@class='sidebar-toggle btn btn-white'])[1]")
+	    WebElement BtnMenu;
 	 @FindBy(xpath =  "//a[@href='#'][contains(.,'Settings')]")
 		WebElement btnsetting;
 	 @FindBy(xpath =  "(//a[normalize-space()='Asset Models'])[1]")
 		WebElement btnAssetModels;
-	 @FindBy(xpath ="(//a[@class='btn btn-danger btn-sm delete-asset'])[1]")
+	 @FindBy(xpath = "(//input[@type='search'])[1]")
+	 WebElement BtnSearch;
+	 @FindBy(xpath ="(//a[@class='btn btn-danger btn-sm delete-asset' or @onclick='return false'])[1]")  //(//a[@class='btn btn-danger btn-sm delete-asset'])[1]
 	 WebElement BtnDelete;
 	 @FindBy(xpath ="(//button[normalize-space()='Yes'])[1]")
 	 WebElement BtnDeleteYes;
+	 
+	 public void SetMenuBtn() {
+		  BtnMenu.click();                                         
+	  }
 	 public void SetSetting() {
 		 JavascriptExecutor js = (JavascriptExecutor)ldriver;
 		 js.executeScript("window.scrollBy(0,350)", "");
@@ -29,8 +38,17 @@ public class Settings_AssetModelsDeletePage {
 	 public void SetAssetModelsBtn() {
 		 btnAssetModels.click();
 	 }
-	 public void SetDeleteBtn() {
+	 public void SetSearchBtn(String search) throws InterruptedException {
+		 BtnSearch.clear();
+		 Thread.sleep(3000);
+		 BtnSearch.sendKeys(search);
+	 }
+	 public void SetDeleteBtn() throws InterruptedException {
+		 Thread.sleep(3000);
 		BtnDelete.click(); 
-		BtnDeleteYes.click();
+		
+	 }
+	 public void SetDeleteYesBtn() {
+		 BtnDeleteYes.click();
 	 }
 }

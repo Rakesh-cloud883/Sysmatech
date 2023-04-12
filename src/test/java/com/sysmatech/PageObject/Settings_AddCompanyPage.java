@@ -14,7 +14,7 @@ WebDriver ldriver;
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
-	@FindBy(xpath =  "//i[contains(@class,'fa fa-gear')]")
+	@FindBy(xpath =  "//i[contains(@class,'fa fa-gear')]") //span[contains(text(),'Settings')]
 	WebElement btnsetting;
 	@FindBy(xpath = "//a[contains(.,'Companies')]")
 	WebElement btncompany;
@@ -22,7 +22,7 @@ WebDriver ldriver;
 	WebElement btncreatenew;
 	@FindBy(id = "name")
 	WebElement txtcompany;
-	@FindBy(xpath = "(//i[@class='fa fa-check icon-white'])[2]")
+	@FindBy(xpath = "(//button[contains(text(),'Save')])[1]")
 	WebElement btnsave;
 	@FindBy(xpath = "(//a[@class='btn btn-link text-left'][normalize-space()='Cancel'])[2]")
 	WebElement btnCancel;
@@ -31,7 +31,7 @@ WebDriver ldriver;
 	{
 		
 		JavascriptExecutor js = (JavascriptExecutor)ldriver;
-		 js.executeScript("window.scrollBy(0,350)", "");
+		 js.executeScript("window.scrollBy(0,350)", "");   //350
 		btnsetting.click();
 		btncompany.click();
 	

@@ -18,7 +18,10 @@ public class Settings_SupplierDeletePage {
 	WebElement btnsetting;
 	@FindBy(xpath = "(//a[normalize-space()='Suppliers'])[1]")
 	WebElement btnSupplier1;
-	@FindBy(xpath="//*[@id=\"suppliersTable\"]/tbody/tr[1]/td[9]/nobr/a[2]")
+	@FindBy(xpath = "(//input[@type='search'])[1]")
+	WebElement BtnSearch;
+//	@FindBy(xpath="//*[@id=\"suppliersTable\"]/tbody/tr[1]/td[9]/nobr/a[2]")
+	@FindBy(xpath = "//a[@class='btn btn-danger btn-sm delete-asset' or @onclick='return false']")  //(//a[@class='btn btn-danger btn-sm delete-asset'])[1]
 	WebElement BtnDelete;
 	@FindBy(xpath="//button[@id=\"dataConfirmOK\"]")
 	WebElement BtnDeleteYes;
@@ -33,10 +36,17 @@ public class Settings_SupplierDeletePage {
 	public void SetSupplier() {
 		btnSupplier1.click();
 	}
-	public void SetDeleteBtn() {
+	public void SetSearchBtn(String search) throws InterruptedException {
+		BtnSearch.clear();
+		Thread.sleep(3000);
+		BtnSearch.sendKeys(search);
+	}
+	public void SetDeleteBtn() throws InterruptedException {
+		Thread.sleep(3000);
 		BtnDelete.click();
+	}
+	public void SetYesDelete() {
 		BtnDeleteYes.click();
-		
 	}
 	
 }

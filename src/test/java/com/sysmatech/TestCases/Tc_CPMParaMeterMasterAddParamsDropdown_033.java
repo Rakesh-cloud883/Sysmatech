@@ -7,7 +7,7 @@ import com.sysmatech.PageObject.LoginPage;
 
 public class Tc_CPMParaMeterMasterAddParamsDropdown_033 extends BaseClass{
 	@Test
-	public void BulkCheckout() throws InterruptedException {
+	public void AddParamDropDown() throws InterruptedException {
 		  LoginPage lp=new LoginPage(driver);  
 	  		lp.SetUsername(username);	
 	  		lp.SetPassword(password);

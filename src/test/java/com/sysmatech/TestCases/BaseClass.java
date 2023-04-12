@@ -36,8 +36,6 @@ public class BaseClass {
      @BeforeClass
 	public void setUp(String br) {
     	 
-     	
-    	 
     	 if(br.equals("chrome"))
     	    {
     		    System.setProperty("webdriver.chrome.driver",readconfig.getchromepath());
@@ -52,29 +50,34 @@ public class BaseClass {
     		 System.setProperty("webdriver.gecko1.driver",readconfig.getfirefoxpath());
     		driver= new FirefoxDriver();
     		driver.manage().window().maximize();
-    		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-			driver.manage().timeouts().pageLoadTimeout(80, TimeUnit.SECONDS);
+    		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+			driver.manage().timeouts().pageLoadTimeout(90, TimeUnit.SECONDS);
     	 }
     	 else if(br.equals("ie")) {
     		 System.setProperty("webdriver.ie.driver",readconfig.getiepath());
     			driver= new EdgeDriver();
     			driver.manage().window().maximize();
-    			driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-    			driver.manage().timeouts().pageLoadTimeout(80, TimeUnit.SECONDS);
+    			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+    			driver.manage().timeouts().pageLoadTimeout(90, TimeUnit.SECONDS);
 
     	 }
     	 
     	 driver.get(baseUrl);
-    	
-
-    	 
      }
      
      @AfterClass
  	public void tearDown()
  	{
- 		driver.quit();
- 	}
+    	
+    	driver.quit(); 
+ //   	try {
+//    		 driver.quit();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+	}
+ 		
+ 		
+ 	
     
      public void captureScreen(WebDriver driver , String tname) throws IOException {
     	 
@@ -85,19 +88,20 @@ public class BaseClass {
     	 System.out.println("ScreenShot Taken");
      }
      public String randomstring() {
-    	 String generatestring=RandomStringUtils.randomAlphabetic(8); 
+    	 String generatestring=RandomStringUtils.randomAlphabetic(4); 
 		return(generatestring);	 
      }
      public static String randomNum() {
-    	 String generatrstring2=RandomStringUtils.randomNumeric(4);
+    	 String generatrstring2=RandomStringUtils.randomNumeric(3);
 		return(generatrstring2);
-		
+		  
     	 
      }
     	 
 		
 	}
-
+//String r1=randomstring()+"AutomationStatus";	
+//page.SetName(r1);
 
 
 

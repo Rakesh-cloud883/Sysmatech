@@ -27,7 +27,7 @@ WebDriver ldriver;
 	WebElement ClickDeleteDropdown1;
 	
 	@FindBy(xpath =  "(//input[@placeholder='Search'])[1]")
-	WebElement SearchBtn;
+	WebElement BtnSearch;
 	@FindBy(xpath =  "(//input[@name='btSelectItem'])[1]")
 	WebElement SelectDeleteItem;
 	@FindBy(xpath =  "(//input[@name='btSelectItem'])[3]")
@@ -53,11 +53,15 @@ WebDriver ldriver;
 		ClickDeleteDropdown1.click();
 		
 	}
+	public void SetSearchBtn(String sname) throws InterruptedException {
+		BtnSearch.clear();
+		Thread.sleep(2000);
+		BtnSearch.sendKeys(sname);
+	}
 
 	public void SetclickDelete() throws InterruptedException {
 		Thread.sleep(3000);
 		SelectDeleteItem.click();
-		SelectDeleteItem1.click();
 		ClickGo.click();
 		
 	}

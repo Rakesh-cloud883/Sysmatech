@@ -12,7 +12,7 @@ import com.sysmatech.utilities.XLUtils;
 
 public class Tc_LoginDDT_002 extends BaseClass {
 
-	@Test(dataProvider = "LoginData2")
+	@Test(dataProvider = "LoginData12")
 	public void loginDDT(String user,String pwd) throws InterruptedException
 	{
 		LoginPage lp=new LoginPage(driver);
@@ -21,10 +21,10 @@ public class Tc_LoginDDT_002 extends BaseClass {
 		lp.SetClickLogin();
 		lp.SetClickLogout();
 	}
-	@DataProvider(name="LoginData2")
+	@DataProvider(name="LoginData12")
 	 String[][] getData() throws IOException 
 	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/sysmatech/TestData/LoginData2.xlsx";
+		String path=System.getProperty("user.dir")+"/src/test/java/com/sysmatech/TestData/LoginData12.xlsx";
 	int rownum=XLUtils.getRowCount (path, "Sheet1");
 	int colcount=XLUtils.getCellCount (path, "Sheet1",1);
 	

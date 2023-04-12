@@ -18,8 +18,8 @@ WebDriver ldriver;
 	WebElement ClickPrevM;
 	@FindBy(xpath =  "(//a[normalize-space()='Parameters Master'])[1]")
 	WebElement ClickPrevMBtn2;
-//	@FindBy(xpath = "(//a[@title='Update'])[1]")
-	@FindBy(xpath = "/html/body/div[1]/div/section[2]/div[3]/div/div/div/div[1]/div[3]/div[2]/table/tbody/tr[1]/td[6]/a[2]")
+	@FindBy(xpath = "(//a[@title='Update'])[2]")
+//	@FindBy(xpath = "/html/body/div[1]/div/section[2]/div[3]/div/div/div/div[1]/div[3]/div[2]/table/tbody/tr[1]/td[6]/a[2]")
 	WebElement UpdateBtn;
 	@FindBy(xpath="(//input[@id='audit_params_name'])[1]")
 	WebElement txtAuditCollectionName;
